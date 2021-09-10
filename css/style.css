@@ -34,3 +34,25 @@ img {
   opacity: 1;
   transform: scale(1);
 }
+.arrowNav {
+  margin: 30px auto;
+  display: flex;
+  width: 40vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.prev,
+.next {
+  background: #fb5;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  border-radius: 2px;
+  padding: 3px 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.next:hover,
+.prev:hover {
+  background: #1a1a1a;
+  color: #fb5;
+}
