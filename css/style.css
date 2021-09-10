@@ -36,28 +36,31 @@ img {
   transform: scale(1);
 }
 .arrowNav {
-  margin: 30px auto;
+  margin: 20px auto;
   display: flex;
-  width: 40vw;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.prev,
-.next {
-  background: #fb5;
-  color: #1a1a1a;
-  border: 1px solid #1a1a1a;
-  border-radius: 2px;
+.arrowNav button {
+  background: #fb5 url("../img/arrow.svg") center center no-repeat;
+  width: 40px;
+  height: 40px;
+  color: #fafafa;
+  border: none;
+  border-radius: 4px;
   padding: 3px 10px;
   transition: 0.2s;
   cursor: pointer;
 }
-.next:hover,
-.prev:hover {
-  background: #1a1a1a;
-  color: #fb5;
+.arrowNav button.next:hover {
+  box-shadow: 0px 2px 5px #111;
 }
-
+.arrowNav button.prev:hover {
+  box-shadow: 0px -2px 5px #111;
+}
+.arrowNav button.prev {
+  transform: rotate(-180deg);
+}
 [data-control="slide"] {
   display: flex;
   justify-content: center;
@@ -78,4 +81,28 @@ img {
 [data-control="slide"] li.active a,
 [data-control="slide"] li a:hover {
   background: #e54;
+}
+.customControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.customControls li {
+  opacity: 0.8;
+  transform: scale(0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.4s;
+  margin: 2px;
+  cursor: pointer;
+}
+.customControls li.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: -3px 3px 5px #111;
 }
